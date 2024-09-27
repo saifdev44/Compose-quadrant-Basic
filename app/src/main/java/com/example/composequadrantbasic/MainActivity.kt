@@ -12,7 +12,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeQuadrantBasicTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Surface(modifier = Modifier.fillMaxSize()) {
                     ComposeQuadrantScreen(
                         textComposeHeadline = stringResource(R.string.text_composable_headline),
                         textCompose = stringResource(R.string.text_composable_article),
@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                         rowCompose = stringResource(R.string.row_composable_article),
                         columnComposeHeadline = stringResource(R.string.column_composable_headline),
                         columnCompose = stringResource(R.string.column_composable_article),
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier
                     )
                 }
             }
